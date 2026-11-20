@@ -72,7 +72,14 @@ class _ImgChangeState extends State<ImgChange> {
           ),
         ],
       ),
-      body: Image.asset(images[imgIndex]),
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Image.asset(
+          images[imgIndex],
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }
